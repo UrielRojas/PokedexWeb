@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pokedex</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="pokemon.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFgeicwnl_0nvjfll3VVaEME0c_SjmsPL0bgU2wiSttw&s"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="information">
+          <h1 class="h1 text-center text-dark">¡Pokedex Web!</h1>
+          <div>
+            <p class="p-3  text-center text-dark">
+              ¡Bienvenido a nuestra página web de consulta de Pokémons! Aquí
+              encontrarás información sobre los adorables monstruos de bolsillo.
+            </p>
+          </div>
+          <div>
+            <button id="btnLoad" class="btn btn-lg btn-outline-secondary">
+              Mostrar Pokemon
+            </button>
+          </div>
+          <br />
+          <div class="content-result">
+            <div class="list-group">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-light">
+                  Nombre: <span id="pokeName"></span>
+                </li>
+                <li id="Poke-list" class="list-group-item list-group-item-action list-group-item-light">
+                  <span id="index"></span>
+                </li>
+              </ul>
+            </div>
+            <br />
+            <div class="img-container">
+              <img
+                id="pokeImgB"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+                class="img-responsive center-block"
+                alt="pokemon"
+              />
+              <img
+                id="pokeImgS"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+                class="img-responsive center-block"
+                alt="pokemon"
+              />
+              <img
+                id="pokeImgD"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+                class="img-responsive center-block"
+                alt="pokemon"
+              />
+              <img
+                id="pokeImgDS"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+                class="img-responsive center-block"
+                alt="pokemon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

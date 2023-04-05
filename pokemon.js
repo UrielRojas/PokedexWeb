@@ -28,11 +28,12 @@ async function ClickBoton(timer){
 
     //Declaración de variables
     let randomNumber = Math.floor(Math.random() * (1010 - 1 + 1)) + 1; //Genera número aleatorios
-    let json = await loadAPI(`https://pokeapi.co/api/v2/pokemon-form/${randomNumber}`);
     let jsonAbilities = await loadAPI(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`);
     let listaPoke = [];
     let list_group_item = document.getElementById("Poke-list");
-    
+
+    console.log(jsonAbilities);
+
     //Limpia las etiquetas creadas
     if(list_group_item.firstChild != null){
         while (list_group_item.firstChild) {
@@ -43,7 +44,7 @@ async function ClickBoton(timer){
 
     
     //Agregar nombre del pokemon
-    document.getElementById("pokeName").innerHTML = json.name;
+    document.getElementById("pokeName").innerHTML = jsonAbilities.name;
 
     //Agrega las habilidades del pokemon
     for (let i = 0; i < jsonAbilities.abilities.length; i++) {
@@ -56,19 +57,19 @@ async function ClickBoton(timer){
     }
 
     //Agregar las imágenes del pokemon
-    if(json.sprites.back_default!=null){
-        document.getElementById("pokeImgB").src = json.sprites.back_default;
+    if(jsonAbilities.sprites.back_default!=null){
+        document.getElementById("pokeImgB").src = jsonAbilities.sprites.back_default;
     }else document.getElementById("pokeImgB").src = 'https://static.thenounproject.com/png/1496955-200.png';
-    if(json.sprites.back_shiny!=null){
-        document.getElementById("pokeImgD").src = json.sprites.back_shiny;
+    if(jsonAbilities.sprites.back_shiny!=null){
+        document.getElementById("pokeImgD").src = jsonAbilities.sprites.back_shiny;
     }else document.getElementById("pokeImgD").src = 'https://static.thenounproject.com/png/1496955-200.png';
     
-    if(json.sprites.front_default!=null){
-        document.getElementById("pokeImgS").src = json.sprites.front_default;
+    if(jsonAbilities.sprites.front_default!=null){
+        document.getElementById("pokeImgS").src = jsonAbilities.sprites.front_default;
     }else document.getElementById("pokeImgS").src = 'https://static.thenounproject.com/png/1496955-200.png';
     
-    if(json.sprites.front_shiny!=null){
-        document.getElementById("pokeImgDS").src = json.sprites.front_shiny;
+    if(jsonAbilities.sprites.front_shiny!=null){
+        document.getElementById("pokeImgDS").src = jsonAbilities.sprites.front_shiny;
     }else document.getElementById("pokeImgDS").src = 'https://static.thenounproject.com/png/1496955-200.png';
     
     
